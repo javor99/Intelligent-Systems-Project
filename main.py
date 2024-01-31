@@ -39,7 +39,6 @@ def get_zone(lat, lon, zones):
     
     return "Outside all zones"
 
-# Example usage
 
 api_endpoint = "https://x8ki-letl-twmt.n7.xano.io/api:ootQLWxx/zones"
 zones = fetch_zone_points(api_endpoint)
@@ -82,7 +81,7 @@ def convert_nmea_to_decimal(gpgga_sentence):
         return None
 
 
-# Your Xano API endpoint
+# Xano API endpoint
 api_url = "https://x8ki-letl-twmt.n7.xano.io/api:cJQUKsKf/cardata"
 
 def capture_and_send_data():
@@ -122,7 +121,7 @@ def capture_and_send_data():
                 print("Opening serial port")
                 ser = serial.Serial('/dev/ttyACM0', baudrate=9600, timeout=1)
 
-                # Get GPS coordinates
+                
                 # Get GPS coordinates
                 try:
                     while True:
@@ -168,7 +167,7 @@ def capture_and_send_data():
                 print(alpr_result.stderr)
 
             # Wait for a certain period before capturing the next picture
-            time.sleep(1)  # Adjust the sleep duration as needed
+            time.sleep(1)  
 
         except Exception as e:
             print(f"An error occurred: {e}")
@@ -182,7 +181,7 @@ while True:
         break
     except Exception as e:
         print(f"An error occurred: {e}")
-        # Add additional error handling as needed
+        
 
 
 
